@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseudo Selectors</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            color: white;
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+        }
+
+        header::before{
+            background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+            content: "";
+            position: absolute; 
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            height: 350px;
+            margin: 2px 264px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        .navigation{
+            display: flex;
+            /* list-style: none; */
+        }
+
+        li{
+            list-style: none;
+            padding: 18px 23px;
+        }
+
+        /* section::before{
+            content: 'this is a content';
+        } */
+
+        h2{
+            font-size: 2.6rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About Us</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Welcome to Coding World</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rerum necessitatibus impedit culpa, quibusdam, tempora vel fugit consequuntur nobis excepturi illum delectus tempore nihil fuga fugiat, et doloremque saepe ratione cupiditate quod. Nam, sapiente!</p>
+    </section>
+    <hr>
+</body>
+</html>

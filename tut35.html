@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom properties</title>
+
+    <style>
+        /* in the last step, if we want to create only one variable that can be accesible for any of the selector then we have to specify a root variable in the style tag */
+        :root{
+            --primary-color: blue;
+            --secondary-color: grey;
+            --maxw: 800px
+        }
+        .box{
+            --box-color: rgb(65, 199, 105);
+            height: 200px;
+            width: 200px;
+            /*background-color: var(--box-color);*//* if a variable is declared in any selector then then it will work only with the selector in which it has declared */
+            margin: 2px 9px;
+            border: 2px solid red;
+            background-color: var(--primary-color);
+            box-shadow: 3px 4px 5px yellowgreen;
+        }
+        .container{
+            --color: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: var(--maxw);
+            margin: auto;
+
+            /* here the variable written in the .box selector doesnot work in this selector. so if we want to use any variable then firstly we have to clarify it inside this specific selector */
+
+            /* background-color: var(--box-color); */
+            /* background-color: var(--color); */
+
+            background-color: var(--secondary-color);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
