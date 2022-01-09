@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            /* background-color: blueviolet; */
+            background-image: url('https://source.unsplash.com/1600x900/?food');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .container{
+            background-color: rgb(7, 114, 82);
+            padding: 12px;
+            border-radius: 12px;
+            /* font-size: 40px; */
+        }
+        .box{
+            height: 40px ;
+            width: 40px;
+            background-color: rgb(52, 150, 207);
+            border-radius: 12px;
+            animation-name: anime;
+            animation-duration: 2s;
+            animation-iteration-count: 6;
+            animation-timing-function: ease-in;
+            animation-delay: 2s;
+        }
+
+        @keyframes anime{
+            from{
+                width: 200px;
+            }
+            to{
+                width: 1000px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+           ye ek chalne wala dibba h
+        </div>
+    </div>
+</body>
+</html>
