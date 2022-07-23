@@ -8,45 +8,91 @@
 
     <style>
         body{
-            /* background-color: blueviolet; */
-            background-image: url('https://source.unsplash.com/1600x900/?food');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+            background-image:url("http://source.usplash.image.com/?hacker")
         }
-        .container{
-            background-color: rgb(7, 114, 82);
-            padding: 12px;
-            border-radius: 12px;
-            /* font-size: 40px; */
+       .container{
+           display: block;
+            width: 400px;
+            height: 400px;
+            margin: auto;
         }
-        .box{
-            height: 40px ;
-            width: 40px;
-            background-color: rgb(52, 150, 207);
-            border-radius: 12px;
-            animation-name: anime;
-            animation-duration: 2s;
-            animation-iteration-count: 6;
-            animation-timing-function: ease-in;
-            animation-delay: 2s;
+        .card{
+            padding: 23px 12px;
+            /* border: 2px solid red; */
+            margin: 23px 12px;
+            background-color: rosybrown;
+            box-shadow: 10px 15px green;
+            box-shadow: 20px -23px black;
+            box-shadow: 4px 8px 3px navy;                            
+            box-shadow: 4px 8px 3px 10px navy;                       
+            box-shadow: inset 3px 5px gold;                           
+            box-shadow: 3px 4px fuchsia, 12px 9px goldenrod;       
         }
 
-        @keyframes anime{
-            from{
-                width: 200px;
-            }
-            to{
-                width: 1000px;
-            }
+        .card h2{
+            text-shadow: 2px 1px 5px white;
+        }
+
+        input{
+            display: block ;
+        }
+
+        input[type='text']{
+            padding:40px;
+            background-color: burlywood;
+            border: 8px solid red;
+        }
+
+        a[target]{
+            color: aqua;
+            font-size: 20px;
+        }
+
+        a[target='_self']{
+            color: plum;
+            font-size: 20px;
+        }
+
+        nth-child(3) {
+            color: palevioletred;
+        }
+
+        li:nth-child(2n+0) {
+            color: rgb(52, 235, 61);
+        }
+
+        li:nth-child(3n+3) {
+            color: rgb(201, 33, 47);
+        }
+
+        li:nth-child(odd) {
+            background-color: rgb(181, 63, 205);
+        }
+
+        li:nth-child(even) {
+            background-color: rgb(221, 145, 57);
         }
     </style>
 </head>
+ 
 <body>
     <div class="container">
-        <div class="box">
-           ye ek chalne wala dibba h
-        </div>
+        <h1><a href="http://google.com" target="_blank">Go to google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to facebook</a></h1>
+        <form action="" class="form-contorl">
+            <input type="text" placeholder="enter your name">
+            <input type="password" placeholder="enter your password">
+            <input type="submit" placeholder="submit">
+    </div>
+    <div class="container">
+    <div class="card" id="card1">
+        <h2>This is HTMl course</h2>
+    </div>
+    <div class="card" id="card1">
+        <h2>This is HTMl course</h2>
+    </div>
+    <div class="card" id="card1">
+        <h2>This is HTMl course</h2>
     </div>
 </body>
 </html>
