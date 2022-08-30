@@ -1,1 +1,1 @@
-writing in Ashish JS and developer console.
+writing in browser JS and developer console.
